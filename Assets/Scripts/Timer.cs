@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 
     public bool loadNextQuestion;
     public float fillFraction;
-    bool isAnsweringQuestion;
+    public bool isAnsweringQuestion = true;
     float timerValue;
     void Update()
     {
@@ -32,8 +32,8 @@ public class Timer : MonoBehaviour
             }
             else
             {
-                isAnsweringQuestion = false;
                 timerValue = flttimeToShowCorrectAnswer;
+                isAnsweringQuestion = false;
             }
         }
         else
